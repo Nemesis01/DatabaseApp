@@ -7,14 +7,15 @@ using System.Threading.Tasks;
 namespace SMI1002_Project.Models
 {
 
-    public enum Category
+    public enum Segment
     {
         Economy,
         Compact,
         Intermediate,
         FullSize,
         SUV,
-        Minivan
+        Minivan, 
+        SuperCar
     }
 
     class Car
@@ -45,7 +46,7 @@ namespace SMI1002_Project.Models
         public string Id { get => id; set => id = value; }
         public string Brand { get; set; }
         public string Model { get; set; }
-        public Category Segment { get; set; }
+        public Segment Category { get; set; }
         public string Color { get; set; }
         public int Year { get; set; }
         public string MatriculationNumber { get; set; }
