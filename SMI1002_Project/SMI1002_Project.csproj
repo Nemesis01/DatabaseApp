@@ -84,6 +84,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\Car.cs" />
+    <Compile Include="Models\DatabaseConnection.cs" />
     <Compile Include="Models\Driver.cs" />
     <Compile Include="Models\Offer.cs" />
     <Compile Include="Models\Person.cs" />
