@@ -1,0 +1,107 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SMI1002_Project.Views"
+        xmlns:Custom="clr-namespace:SMI1002_Project.Custom" x:Name="AddUserWindow1" x:Class="SMI1002_Project.Views.AddUserWindow"
+        mc:Ignorable="d"
+        Title="AddUserWindow" Height="800" Width="800">
+    <Window.Resources>
+        <Style x:Key="PageTitleStyle" TargetType="{x:Type TextBlock}">
+            <Setter Property="FontSize" Value="22"/>
+            <Setter Property="FontFamily" Value="Segoe UI SemiLight" />
+            <Setter Property="Foreground" Value="#FF007ACC"/>
+        </Style>
+        <Style TargetType="{x:Type Label}">
+            <Setter Property="Margin" Value="5, 2"/>
+        </Style>
+        <Style TargetType="{x:Type TextBox}">
+            <Setter Property="Margin" Value="10, 2"/>
+            <Setter Property="FontSize" Value="16"/>
+        </Style>
+        <Style TargetType="{x:Type RadioButton}">
+            <Setter Property="Margin" Value="10, 2" />
+        </Style>
+    </Window.Resources>
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Text="Nouvel Utilisateur" Style="{StaticResource PageTitleStyle}"/>
+        <Label Grid.Row="1" Grid.Column="0" Content="Type d'utilisateur : "/>
+        <RadioButton x:Name="radioBtnPassenger" Grid.Row="2" Grid.Column="0" Content="Passager" IsChecked="True" GroupName="RadioGroupUserType"/>
+        <RadioButton x:Name="radioBtnDriver" Grid.Row="2" Grid.Column="1" Content="Chauffeur" GroupName="RadioGroupUserType"/>
+        <Label Grid.Row="3" Grid.Column="0"  Content="Nom : " />
+        <Label Grid.Row="3" Grid.Column="1"  Content="Prénom :" />
+        <TextBox Grid.Row="4" Grid.Column="0" />
+        <TextBox Grid.Row="4" Grid.Column="1" />
+        <Label Grid.Row="5" Grid.Column="0"  Content="No Téléphone :" />
+        <TextBox Grid.Row="6" Grid.Column="0" />
+        <Label Grid.Row="5" Grid.Column="1"  Content="Adresse électronique :" />
+        <TextBox Grid.Row="6" Grid.Column="1" />
+        <Label Grid.Row="7" Grid.Column="0" Content="Mot de passe : "/>
+        <TextBox Grid.Row="8" Grid.Column="0"/>
+        <Label Grid.Row="9" Grid.Column="0" Content="Confirmer votre mot de passe : "/>
+        <TextBox Grid.Row="10" Grid.Column="0"/>
+        <Label Grid.Row="9" Grid.Column="1" Content="No de permis de conduire : " Visibility="Hidden"/>
+        <TextBox Grid.Row="10" Grid.Column="1" Visibility="Hidden"/>
+        <GroupBox x:Name="GroupBoxCarInfos" Grid.Row="11" Grid.Column="0" Grid.RowSpan="4" Grid.ColumnSpan="2" Header="Infos Véhicule :" Margin="10,2" BorderBrush="#FF007ACC" Foreground="#FF007ACC">
+            <Grid x:Name="GroupBoxCarInfos1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition  Height="Auto"/>
+                    <RowDefinition  Height="Auto"/>
+                    <RowDefinition  Height="Auto"/>
+                    <RowDefinition  Height="Auto"/>
+                    <RowDefinition  Height="Auto"/>
+                    <RowDefinition  Height="Auto"/>
+                    <RowDefinition  Height="Auto"/>
+                    <RowDefinition  Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" Content="Marque : " />
+                <Label Grid.Row="0" Grid.Column="1" Content="Modèle : " />
+                <TextBox Grid.Row="1" Grid.Column="0" />
+                <TextBox Grid.Row="1" Grid.Column="1" />
+                <Label Grid.Row="2" Grid.Column="0" Content="Couleur : " />
+                <Label Grid.Row="2" Grid.Column="1" Content="Année : " />
+                <TextBox Grid.Row="3" Grid.Column="0" />
+                <TextBox Grid.Row="3" Grid.Column="1" />
+                <Label Grid.Row="4" Grid.Column="0" Content="No Immatriculation : " />
+                <TextBox Grid.Row="5" Grid.Column="0" />
+            </Grid>
+        </GroupBox>
+        <StackPanel Grid.Column="0" Grid.Row="17" Grid.ColumnSpan="2" Height="60" Orientation="Horizontal" Margin="0,25,0,0" >
+            <Custom:ImageButton Width="100" Height="30"/>
+            <Custom:ImageButton Width="100" Loaded="ImageButton_Loaded" Height="30"/>
+            <Custom:ImageButton Width="100" Height="30" HorizontalAlignment="Right"/>
+
+        </StackPanel>
+
+    </Grid>
+</Window>

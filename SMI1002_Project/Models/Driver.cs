@@ -11,6 +11,8 @@ namespace SMI1002_Project.Models
 
 
         #region Members
+        private string licenseNumber;
+        private Car favouriteCar;
         #endregion
 
         #region Constructors
@@ -22,6 +24,11 @@ namespace SMI1002_Project.Models
 
         #region Properties
         public string LicenseNumber { get; set; }
+        public Car FavouriteCar
+        {
+            get { return this.favouriteCar; }
+            set { this.favouriteCar = value; }
+        }
         #endregion
 
 

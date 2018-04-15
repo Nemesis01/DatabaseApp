@@ -1,0 +1,43 @@
+﻿<UserControl x:Name="ActionsView" x:Class="SMI1002_Project.Views.ActionView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SMI1002_Project.Views"
+             xmlns:custom="clr-namespace:SMI1002_Project.Custom"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" Width="200">
+    <Grid Background="#FF101011">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="18*"/>
+            <RowDefinition Height="206*"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="BtnHome" Grid.Row="0" Content="Button" HorizontalAlignment="Left" Width="36"/>
+        <ListBox x:Name="LeftMenu" Grid.Row="1" Height="413.839" VerticalAlignment="Bottom" Background="#FF101011">
+            <ListBoxItem Width="196" IsSelected="True">
+                <StackPanel Orientation="Horizontal" Width="180">
+                    <Image Height="40" Width="40" Source="/SMI1002_Project;component/Images/users_ico_32.png"/>
+                    <TextBlock Text="Utilisateurs" Width="140" Foreground="#FF686868" VerticalAlignment="Center" FontSize="18" Margin="5,0,0,0"/>
+                </StackPanel>
+            </ListBoxItem>
+            <ListBoxItem Width="190">
+                <StackPanel Orientation="Horizontal" Width="190">
+                    <Image Height="40" Width="40" Source="/SMI1002_Project;component/Images/offers_ico_32.png"/>
+                    <TextBlock Text="Offres" Width="140" Foreground="#FF686868" VerticalAlignment="Center" FontSize="18" Margin="5,0,0,0"/>
+                </StackPanel>
+            </ListBoxItem>
+            <ListBoxItem Width="190">
+                <StackPanel Orientation="Horizontal" Width="190">
+                    <Image Height="40" Width="40" Source="/SMI1002_Project;component/Images/trips_ico_32.png"/>
+                    <TextBlock Text="Trajets" Width="140" Foreground="#FF686868" VerticalAlignment="Center" FontSize="18" Margin="5,0,0,0"/>
+                </StackPanel>
+            </ListBoxItem>
+            <ListBoxItem Width="190">
+                <StackPanel Orientation="Horizontal" Width="190">
+                    <Image Height="40" Width="40" Source="/SMI1002_Project;component/Images/cars_ico_32.png"/>
+                    <TextBlock Text="Voitures" Width="140" Foreground="#FF686868" VerticalAlignment="Center" FontSize="18" Margin="5,0,0,0"/>
+                </StackPanel>
+            </ListBoxItem>
+        </ListBox>
+    </Grid>
+</UserControl>
