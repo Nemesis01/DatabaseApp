@@ -22,27 +22,36 @@ namespace SMI1002_Project.Models
 
 
         #region Members
-        private string id;
+        private int id;
+        private Driver owner;
         #endregion
 
         #region Constructors
         public Car()
         {
+            
+        }
 
+        public Car(Driver owner)
+        {
+            this.owner = owner;
         }
 
         public Car(string brand, string model, int year, string matriculationNumber)
         {
-            Brand = brand;
-            Model = model;
-            Year = year;
-            MatriculationNumber = matriculationNumber;
+            this.Brand = brand;
+            this.Model = model;
+            this.Year = year;
+            this.MatriculationNumber = matriculationNumber;
         }
-
         #endregion
 
         #region Properties
-        public string Id { get => id; set => id = value; }
+        public int Id { get => id; set => id = value; }
+        public string OwnerId
+        {
+            get { return (this.owner == null) ? null : this.owner.Id; }
+        }
         public string Brand { get; set; }
         public string Model { get; set; }
         public Category Segment { get; set; }

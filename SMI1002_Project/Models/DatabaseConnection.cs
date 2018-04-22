@@ -8,24 +8,79 @@ using System.Threading.Tasks;
 
 namespace SMI1002_Project.Models
 {
-    class DatabaseConnection
+    class DatabaseInterface
     {
 
         #region Members
-        private string oradb;
+        private static OracleConnection connection;
         #endregion
 
 
         #region Constructors
-        public DatabaseConnection()
+        public DatabaseInterface()
         {
-            OracleConnection conn = new OracleConnection("test");
+            connection = new OracleConnection("test");
+        }
+        public DatabaseInterface(string host, string port, string serviceName, string user, string password)
+        {
+            // Requête de connexion à la base de données 
+            string connectionRequest = string.Format("" +
+                "Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST={0})" +
+                "(PORT={1}))(CONNECT_DATA=(SID={2})));User Id={3};Password={4};",
+                    host,
+                    port,
+                    serviceName,
+                    user, 
+                    password);
+
+            // Création d'un objet de connexion à la base de données
+            connection = new OracleConnection(connectionRequest);
         }
         #endregion
 
 
 
         #region Properties
+        public static OracleConnection ConnectionInstance
+        {
+            get { return connection ; }
+        }
+        #endregion
+
+
+        #region Methods
+        public bool OpenConnection()
+        {
+            try
+            {
+                connection.Open();
+            }
+            catch(OracleException e)
+            {
+                return false;
+            }
+            return true;
+        }
+
+        public bool CloseConnection()
+        {
+            try
+            {
+                connection.Close();
+            }
+            catch(OracleException e)
+            {
+                return false;
+            }
+            return true;
+        }
+
+        public bool IsConnectionOpen()
+        {
+            if (connection.State == System.Data.ConnectionState.Open)
+                return true;
+            return false;
+        }
         #endregion
 
     }

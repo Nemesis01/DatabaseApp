@@ -9,7 +9,7 @@
         Title="Comodo" Height="450" Width="960">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="24*"/>
+            <RowDefinition Height="10*"/>
             <RowDefinition Height="181*"/>
             <RowDefinition Height="15*"/>
         </Grid.RowDefinitions>
@@ -18,5 +18,24 @@
             <ColumnDefinition Width="85*"/>
             <ColumnDefinition Width="167*"/>
         </Grid.ColumnDefinitions>
+        <Menu Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3">
+            <MenuItem Header="Comodo">
+                <MenuItem Header="Ajouter">
+                    <MenuItem Header="Utilisateur"/>
+                    <MenuItem Header="Offre"/>
+                    <MenuItem Header="Voiture"/>
+                    <MenuItem Header="Nouvelle Souscription"/>
+                </MenuItem>
+                <MenuItem Header="Quitter"/>
+            </MenuItem>
+            <MenuItem Header="Edition">
+                <MenuItem Header="Copier"/>
+                <MenuItem Header="Couper"/>
+                <MenuItem Header="Coller"/>
+                <MenuItem Header="Annuler"/>
+                <MenuItem Header="Répeter"/>
+            </MenuItem>
+            <MenuItem Header="À propos" />
+        </Menu>
     </Grid>
 </Window>

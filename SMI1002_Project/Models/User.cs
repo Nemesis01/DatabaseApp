@@ -21,21 +21,16 @@ namespace SMI1002_Project.Models
 
         }
 
-        public User(string id, string password)
+        public User(string FirstName, string LastName, string Email, string PhoneNumber, string Password)
+            :base(FirstName, LastName, Email, PhoneNumber, Password)
         {
-            Id = id;
-            Password = password;
+            
         }
 
         #endregion
 
         #region Properties
-        public string Id
-        {
-            get { return this.id; }
-            set { this.id = value; }
-        }
-        public string Password { get; set; }
+
         #endregion
 
     }

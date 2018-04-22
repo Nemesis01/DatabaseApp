@@ -9,8 +9,7 @@ namespace SMI1002_Project.View_Models
 {
     abstract class ViewModelBase : INotifyPropertyChanged
     {
-
-
+        
         #region Methods
         protected void OnPropertyChanged(string propertyName)
         {
@@ -18,8 +17,7 @@ namespace SMI1002_Project.View_Models
                 this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
         }
         #endregion
-
-
+        
 
         #region INotifyPropertyChanged Implementation
         public event PropertyChangedEventHandler PropertyChanged;

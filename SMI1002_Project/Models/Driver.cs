@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SMI1002_Project.Models
 {
-    class Driver : User
+    class Driver : Person
     {
 
 
@@ -20,6 +20,11 @@ namespace SMI1002_Project.Models
         {
             
         }
+        public Driver(string FirstName, string LastName, string Email, string PhoneNumber, string Password)
+            :base(FirstName, LastName, Email, PhoneNumber, Password)
+        {
+            
+        }
         #endregion
 
         #region Properties
@@ -29,6 +34,7 @@ namespace SMI1002_Project.Models
             get { return this.favouriteCar; }
             set { this.favouriteCar = value; }
         }
+        public List<Car> DrivenCar { get; set; }
         #endregion
 
 

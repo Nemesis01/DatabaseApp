@@ -7,13 +7,13 @@
              xmlns:custom="clr-namespace:SMI1002_Project.Custom"
              mc:Ignorable="d" 
              d:DesignHeight="450" Width="200">
-    <Grid Background="#FF101011">
+    <Grid Background="White">
         <Grid.RowDefinitions>
             <RowDefinition Height="18*"/>
             <RowDefinition Height="206*"/>
         </Grid.RowDefinitions>
         <Button x:Name="BtnHome" Grid.Row="0" Content="Button" HorizontalAlignment="Left" Width="36"/>
-        <ListBox x:Name="LeftMenu" Grid.Row="1" Height="413.839" VerticalAlignment="Bottom" Background="#FF101011">
+        <ListBox x:Name="LeftMenu" Grid.Row="1" Height="413.839" VerticalAlignment="Bottom" Background="White">
             <ListBoxItem Width="196" IsSelected="True">
                 <StackPanel Orientation="Horizontal" Width="180">
                     <Image Height="40" Width="40" Source="/SMI1002_Project;component/Images/users_ico_32.png"/>

@@ -20,9 +20,15 @@ namespace SMI1002_Project
     /// </summary>
     public partial class MainWindow : Window
     {
+
+
+        #region Constructors
         public MainWindow()
         {
             InitializeComponent();
         }
+        #endregion
+
+
     }
 }
